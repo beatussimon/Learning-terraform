@@ -1,0 +1,43 @@
+TERRAFORM:
+Imperative Languages
+
+You write explicit instructions for the computer to follow in order.
+
+Think of it like giving a recipe: step 1, step 2, step 3.
+
+You manage the program state and control flow (loops, conditionals).
+
+Examples: C, Java, Python, JavaScript, Ruby.
+
+Pros: More control, often easier for complex algorithms.
+
+Cons: Can be more verbose and error-prone.
+
+Declarative Languages
+
+You specify what you want as the outcome, not the steps to get there.
+
+The underlying system figures out how to achieve it.
+
+Often more concise and readable.
+
+Examples:
+
+SQL (query data without specifying search algorithm)
+
+HTML/CSS (describe page layout, not browser rendering steps)
+
+Functional languages (like Haskell) emphasize declarative style.
+
+Logic programming (Prolog).
+
+Pros: Easier to reason about, less boilerplate.
+
+Cons: Less control over performance and execution details.
+
+
+
+Terraform sits in the middle between imperative and declarative  where it lets you use the declarative stuff wile fiving you
+options to upgrade and up and use the complex data structure etc.
+
+Infrastructure Lifecycle
