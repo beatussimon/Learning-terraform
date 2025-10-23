@@ -41,3 +41,5 @@ Terraform sits in the middle between imperative and declarative  where it lets y
 options to upgrade and up and use the complex data structure etc.
 
 Infrastructure Lifecycle
+
+Endede on 1:00:00
