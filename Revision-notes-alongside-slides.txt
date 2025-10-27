@@ -43,3 +43,16 @@ options to upgrade and up and use the complex data structure etc.
 Infrastructure Lifecycle
 
 Endede on 1:00:00
+
+
+Terraform cont..
+Visualizing the execution plans:
+In cloud computing, provisioning is the process of setting up and configuring the necessary IT resources, like virtual machines, storage, and networking, to run applications and services. It includes both the initial setup of the underlying infrastructure and the on-demand allocation of resources and services to users, often automated to be fast and efficient. 
+Key aspects of cloud provisioning
+Infrastructure setup: This involves creating the foundational components of the cloud environment, such as networking, storage, and the virtualization layers.
+Resource allocation: Once the infrastructure is in place, this step involves making specific resources available to users. This can include allocating virtual machines, databases, and other services as needed.
+Automation: Modern cloud provisioning heavily relies on automation to make the process faster and less prone to human error. This can be done through scripts, templates like ARM templates, or tools that define infrastructure as code.
+User access: It also includes establishing access for authorized users by setting up their accounts and permissions to access the resources they need.
+Dynamic and self-service: Cloud provisioning can be dynamic, automatically adjusting resources based on demand, and can also be self-service, allowing users to request and set up their own resources through a portal. 
+
+2:05:00
