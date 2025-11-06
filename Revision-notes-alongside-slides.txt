@@ -166,3 +166,46 @@ if the filename having your variables isn't tfvars you have to tell terraform
 using the command terraform apply -var-file=additional_tfvars_file
 
 Expressions and functions => use the documentation for more reference
+
+
+Meta arguments:
+depends_on => if you have things depending on others -> terraform will figure out
+the sequence of the things during execution 
+
+Notes:
+terraform automatically generates the dependency graph based on references
+-> If two resources depend on each others data) depends_on specifies that dependency to 
+enforce ordering
+
+For example if the software instance needs access to s3 storage, trying to create the aws_instance
+would fail if attempting to create it before the aws_iam_role_policy
+
+Count:
+Allows for creation of multiple resources/modules from a single block
+-> Useful when multiple neccesary resources are nearly identical 
+
+if you have several identical resources you created using count; you have to use
+tag to differentiate them
+
+
+for_each
+-allows creation of multiple resources/modules from a single block
+-allows more control to customize each resource than count
+
+Lifecycle:
+A set of meta argument to control terraform behaviour for speciefic resources
+
+-create_before_destroy can help with zero downtime deployments
+-ignore changes prevents terraform form reverting metadata being set elsewhere
+
+-prevent destroy causes terraform to reject any plan which would reject this resource
+
+Provisioners -> performs actions on local or remote machines
+
+file
+local-exec
+remote-exec
+vendor=> chef, puppet, ansible
+
+Part 6: Project organization and modules
+1:20:00	
