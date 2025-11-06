@@ -58,3 +58,37 @@ Dynamic and self-service: Cloud provisioning can be dynamic, automatically adjus
 2:05:00
 
 Complete Terraform Course - From BEGINNER to PRO! (Learn Infrastructure as Code) By devops directive
+
+Provisioning: In IT, provisioning is the process of creating infrastructure and making it available to end users. Configuration: It is the process of configuring the provisioned IT infrastructure resources. For example, installing and configuring a database on a server or configuring network and firewall settings.1
+Infrastructure is provisioned as code
+Servers are created and destroyed in seconds
+Long lived and mutable -> now they are short lived and immutable
+
+Three main approaches for provisioning cloud resources:
+=> GUI
+-> API/CLI
+-> Iac
+
+Categories of Iac
+-> Ad hoc scripts => tells you what infrastructure to provision
+=> configuration management tools
+=> server templating tool -> this category is for building out a template for what you are going to 
+	provision to a server
+	AMI=> amazon machine image or basically any machine image is built in from some image and you 
+	all your dependencies into your image
+
+=> orchastration tools
+
+These are for how you can define your application deployment, less of how you can define the servers behind it
+	but take your code and deploy it in a certain way in whatever system you have provisioned in the background
+
+=> Provisioning tools
+	Focused on provisioning those cloud resources to begin with
+
+Declarative tools=> you define the end state of what you want eg. i want 5 servers 1 load balancer etc. and the tool manages the
+	api and what calls needs to be made to make that happen
+Imperative tools=> You tell the system what you want to happend and the sequence you want that to happen
+	and most of the configuration tools falls on the imperative side of the tools that can make them more declarative
+
+Lots of terraform tools falls on the declarative side where you define the end state of what you want to take place
+and you then let the tool handle the details of how to get there
