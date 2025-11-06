@@ -56,3 +56,5 @@ User access: It also includes establishing access for authorized users by settin
 Dynamic and self-service: Cloud provisioning can be dynamic, automatically adjusting resources based on demand, and can also be self-service, allowing users to request and set up their own resources through a portal. 
 
 2:05:00
+
+Complete Terraform Course - From BEGINNER to PRO! (Learn Infrastructure as Code) By devops directive
