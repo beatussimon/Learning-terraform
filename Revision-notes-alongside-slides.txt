@@ -209,3 +209,36 @@ vendor=> chef, puppet, ansible
 
 Part 6: Project organization and modules
 1:20:00	
+
+Modules are containers of multiple resources that are used together. A module consists of a collection of .tf  and or .tf.json file kept together in a directory
+
+Modules are the main way to package and reuse resource configuration with terraform
+
+Types of module:
+Root modules -> default module containing all the .tf files in the main working directory
+child modules -> a separate external module reffered from a tf file
+
+module sources:
+local paths
+terraform registry
+github
+bitbucket
+generic git mercurial processes
+http/urls
+s3 buckets
+gcs buckets
+
+syntax:
+module "module_name"{
+source= "an_absolute_path"
+//for the terraform registry it would have the source= "hascorp/consul/aws" and version= "2.3.4"
+
+What makes a good module?
+	Raises the abstraction level from base resource types
+=> groups resources in a logical fashion
+-> exposes input variables to allow neccesary customization and composition
+=> provides useful defaults
+-> return outputs to make further intergration possible
+
+1:30:00 finish the course tommorow
+}
