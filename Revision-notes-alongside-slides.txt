@@ -92,3 +92,77 @@ Imperative tools=> You tell the system what you want to happend and the sequence
 
 Lots of terraform tools falls on the declarative side where you define the end state of what you want to take place
 and you then let the tool handle the details of how to get there
+
+
+Terraform overview and setup:
+Its a tool for building changing and versioning infrastructure safely and efficiently
+Enables application software best practices to infrastructure
+
+Its cloud agnostic
+
+parker=> server templating where you can build everything with that template, so that when you build it has both the application code and 
+dependencies bundled in the code
+
+Common patterns:
+terraform + ansible
+terraform + parker(server templating)
+terraform + orchastration tools
+
+
+at the core we have terraform core
+we provide the config and terraform will figure out interacting with the cloud provider to maintain the 
+desired state of what was required by the config files
+
+the AMI is the amazon machine image containig the full set of information required to create an EC2 vir
+tual machine instance
+
+Basic terraform usage:
+terraform init=> plan=> apply => destroy
+
+State file:
+-> is the terraform's representation of the world 
+-> JSON file containing information about every resource and data object
+-> contains sensitive info
+-> can be stored locally or remotely
+
+terraform plan
+takes the desired state and compares it to the actual state of the world
+
+terraform destroy => destroys everything
+
+for remote we have terraform cloud but we can also manage ourself using s3 and 
+dynamo db which has state locking and will prevent the concurrent state changes 
+when different users are working on the same file, for instance when a user is 
+running terraform plan the other will have to wait for that command to finish before the 
+command from the other user is executed
+
+
+Variables and output:
+variable types:
+input variables => var.<name>
+local variables => local.<name>
+output variables => 
+
+Setting input variables:
+(In order of precedence //lowest to highest)
+-manual entry during plan/apply
+-default value in declaration block
+-TF_VAR_<name> environment variables
+-terraform.tvars file
+-*.auto.tfvars file
+-commandline -var or -var-file
+
+validation:
+-Type checking happens automatically
+-Custom conditions can also be enforced => You can run your own custom validation rules
+
+sensitive data:
+=mark a variable as sensitive
+-Pass to terraform apply with 
+TV_VAR_variable
+	-> -var (retrieved from secret manager at runtime)
+
+if the filename having your variables isn't tfvars you have to tell terraform 
+using the command terraform apply -var-file=additional_tfvars_file
+
+Expressions and functions => use the documentation for more reference
